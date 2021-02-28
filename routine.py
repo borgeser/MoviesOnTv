@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+
 from controller import get_xml, get_programmes, find_movie
 from model import Programme
 
@@ -8,6 +10,7 @@ movies_to_search = [
 
 
 def execute():
+    load_dotenv()
     get_matches()
 
 
