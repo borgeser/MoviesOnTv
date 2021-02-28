@@ -15,3 +15,11 @@ def get_programmes(root: ElementTree):
 def get_xml(url="https://xmltv.ch/xmltv/xmltv-tnt.xml"):
     contents = urllib.request.urlopen(url).read()
     return ElementTree.fromstring(contents)
+
+
+def find_movie(title, programmes):
+    return [prog for prog in programmes if is_title_equal(title, prog.title)]
+
+
+def is_title_equal(search, title):
+    return search.lower() in title.lower()
