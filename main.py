@@ -1,11 +1,12 @@
-from controller import get_xml, get_programmes, find_movie
+from dotenv import load_dotenv
+
+from routine import get_non_empty_matches
 
 
 def main():
-    xml = get_xml()
-    programmes = get_programmes(xml)
-    candidates = find_movie("un coeur en hiver", programmes)
-    print(candidates)
+    load_dotenv()
+    matches_dict = get_non_empty_matches()
+    print(f"Results: {matches_dict}")
 
 
 if __name__ == "__main__":

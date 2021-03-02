@@ -51,4 +51,5 @@ def get_email_body(matches):
     return text
 
 
-execute()
+if __name__ == "__main__":
+    execute()

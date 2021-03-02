@@ -27,4 +27,3 @@ Personally I use [Heroku Scheduler](https://devcenter.heroku.com/articles/schedu
 ## Next step
 
 * Extract the movies titles in a simple and accessible "database"
-* Replace main() function by something useful
