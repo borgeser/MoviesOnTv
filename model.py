@@ -7,7 +7,7 @@ class Programme:
         self.end = end
 
     def __str__(self):
-        return self.title
+        return f"{self.title} | {self.category} | {self.channel} | {self.start} | {self.end}"
 
     def __repr__(self):
-        return f"{self.title} | {self.category} | {self.channel} | {self.start}"
+        return self.__str__()
