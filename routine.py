@@ -9,6 +9,8 @@ movies_to_search = [
     "Bridget Jones : l'âge de raison",
     "H2G2",
     "Le sens de la fête",
+    "Le Goût des autres",
+    "Le Nom de la rose",
     "Frantz"
 ]
 
