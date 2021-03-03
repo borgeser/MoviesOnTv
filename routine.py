@@ -10,8 +10,7 @@ movies_to_search = [
     "H2G2",
     "Le sens de la fête",
     "Le Goût des autres",
-    "Le Nom de la rose",
-    "Frantz"
+    "Le Nom de la rose"
 ]
 
 
