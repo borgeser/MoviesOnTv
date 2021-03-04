@@ -10,7 +10,13 @@ movies_to_search = [
     "H2G2",
     "Le sens de la fête",
     "Le Goût des autres",
-    "Le Nom de la rose"
+    "Le Nom de la rose",
+    "Brazil",
+    "Memento",
+    "Austin Powers",
+    "Mon petit doigt m'a dit",
+    "Associés contre le crime",
+    "À couteaux tirés"
 ]
 
 
