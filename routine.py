@@ -4,25 +4,14 @@ from dotenv import load_dotenv
 
 from controller import get_xml, get_programmes, find_movie
 from mailer import send_mail
-
-movies_to_search = [
-    "Bridget Jones : l'âge de raison",
-    "H2G2",
-    "Le sens de la fête",
-    "Le Goût des autres",
-    "Le Nom de la rose",
-    "Brazil",
-    "Memento",
-    "Austin Powers",
-    "Mon petit doigt m'a dit",
-    "Associés contre le crime",
-    "À couteaux tirés"
-]
+from movies_to_search import get_movies_to_search
 
 
 def execute():
     load_dotenv()
-    matches_dict = get_non_empty_matches()
+    movies_to_search = get_movies_to_search()
+    print(f"Trying to search movies: {movies_to_search}")
+    matches_dict = get_non_empty_matches(movies_to_search)
     if len(matches_dict) > 0:
         print(f"New movies found! Sending them by email. Detail: {matches_dict}")
         send_email_for_movies(matches_dict)
@@ -30,7 +19,7 @@ def execute():
         print("No movie found on TV.")
 
 
-def get_non_empty_matches():
+def get_non_empty_matches(movies_to_search):
     xml = get_xml()
     programmes = get_programmes(xml)
     response = dict()
